@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T4</title>
+</head>
+<body>
+  
+  <svg width="500" height="500" style="border: 3px solid red">
+    <line
+      id="line"
+      x1="0"
+      y1="0"
+      x2="0"
+      y2="0"
+      style="stroke: rgb(12, 130, 185); stroke-width: 2"
+    ></line>
+  </svg>
+      <script type="text/javascript">
+      const line = document.querySelector("#line");
+
+      let val = 0;
+      const animateLine = setInterval(() => {
+        val += 40;
+        line.setAttribute("x2", val);
+        line.setAttribute("y2", val);
+        if (val >= 500) {
+          clearInterval(animateLine);
+          line.setAttribute("x2", 500);
+          line.setAttribute("y2", 500);
+          alert("Animation ended!");
+        }
+      }, 200);
+    </script>
+</body>
+</html>

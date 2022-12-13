@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>video task</title>
+</head>
+<body>
+  <h1>Custom HTML5 Video Player Demo</h1>
+	<div id='player'>
+		<video id='video-element' width="400px" height="400px">
+			<source src='./vio/video.mp4' type='video/mp4'>
+		</video>
+		<div id='controls'>
+			<progress id='progress-bar' min='0' max='100' value='0'>0% played</progress>
+			<button id='btnReplay' class='replay' title='replay' accesskey="R" onclick='replayVideo();'>Replay</button>	
+			<button id='btnPlayPause' class='play' title='play' accesskey="P" onclick='playPauseVideo();'>Play</button>
+			<button id='btnStop' class='stop' title='stop' accesskey="X" onclick='stopVideo();'>Stop</button>
+      <input type="range" id="volume-bar" title="volume" min="0" max="1" step="0.1" value="1">
+			<button id='btnMute' class='mute' title='mute' onclick='muteVolume();'>Mute</button>	
+      <button id='btnspeed' class='speed' title='speed' onclick='speedvid();'>speed</button>	
+		</div>
+	</div>	
+  <script src="video.js"></script>
+</body>
+</html>
